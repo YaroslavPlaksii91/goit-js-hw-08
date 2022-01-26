@@ -14,7 +14,7 @@ function makeGalleryItem({ preview, original, description }) {
 }
 
 function makeGalleryMarkup(images) {
-  return images.map(image => makeGalleryItem(image)).join('');
+  return images.map(makeGalleryItem).join('');
 }
 
 new SimpleLightbox('.gallery a', {
